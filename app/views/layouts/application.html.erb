@@ -8,8 +8,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header" >
+  <ul class="nav nav-pills pull-right">
+    <li ng-class="{ active: isActive('/') }">
+      <a ng-href="/">Home</a>
+    </li>
+    <li ng-class="{ active: isActive('/sign_up') }" ng-show="!user.id">
+      <a ng-href="/sign_up">Sign up</a>
+    </li>
+    <li ng-class="{ active: isActive('/sign_in') }" ng-show="!user.id">
+      <a ng-href="/sign_in">Log in</a>
+    </li>
+    <li ng-show="user.id">
+      <a ng-click='signOut()'>Sign out</a>
+    </li>
+  </ul>
+  <h3 class="text-muted">Practice</h3>
+</div>
 
-<div ng-view></div>
+
+<div ng-view>
+</div>
 
 </body>
 </html>

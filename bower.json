@@ -1,0 +1,19 @@
+{
+  "name": "login",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ryanshim24/AngularTemplate",
+  "authors": [
+    "Ryan Shim <ryanshim92@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-token-auth": "~0.0.24"
+  }
+}

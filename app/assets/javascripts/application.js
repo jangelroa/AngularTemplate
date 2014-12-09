@@ -15,5 +15,7 @@
 //= require angular
 //= require angular-route
 //= require angularjs/rails/resource
+//= require angular-cookie/angular-cookie
+//= require ng-token-auth/dist/ng-token-auth
 //= require app/app
 //= require_tree .
