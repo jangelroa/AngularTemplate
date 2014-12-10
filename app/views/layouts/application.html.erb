@@ -8,27 +8,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="header" >
-  <ul class="nav nav-pills pull-right">
-    <li ng-class="{ active: isActive('/') }">
-      <a ng-href="/">Home</a>
-    </li>
-    <li ng-class="{ active: isActive('/sign_up') }" ng-show="!user.id">
-      <a ng-href="/sign_up">Sign up</a>
-    </li>
-    <li ng-class="{ active: isActive('/sign_in') }" ng-show="!user.id">
-      <a ng-href="/sign_in">Log in</a>
-    </li>
-    <li ng-show="user.id">
-      <a ng-click='signOut()'>Sign out</a>
-    </li>
-  </ul>
-  <h3 class="text-muted">Practice</h3>
-</div>
 
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ng-href="/"><b>Final</b></a>
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li ng-show="!user.id">
+          <a ng-href="/sign_up">Sign up</a>
+        </li>
+        <li ng-show="!user.id">
+          <a ng-href="/sign_in">Log in</a>
+        </li>
+        <li ng-show="user.id">
+          <a ng-click='signOut()' style="cursor: pointer;">Sign out</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 
 <div ng-view>
 </div>
 
 </body>
 </html>
+
+
+

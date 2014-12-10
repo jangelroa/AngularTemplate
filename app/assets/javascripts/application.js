@@ -18,4 +18,6 @@
 //= require angular-cookie/angular-cookie
 //= require ng-token-auth/dist/ng-token-auth
 //= require app/app
+//= require ui-bootstrap-tpls-0.12.0.min
+//= require bootstrap.min
 //= require_tree .

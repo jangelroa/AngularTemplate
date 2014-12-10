@@ -12,6 +12,7 @@ angular.module("app.controllers").controller "UserRegistrationsCtrl", [
         $auth.submitLogin
           email: $scope.registrationForm.email
           password: $scope.registrationForm.password
+
 ]
 
 

@@ -19,9 +19,20 @@ app.run [
   "$location"
   ($rootScope, $location) ->
     $rootScope.$on "auth:login-success", ->
-      $location.path "/about"
+      $location.path "/home"
     $rootScope.$on "auth:logout-success", ->
       $location.path "/"
+]
+
+app.directive "autofocus", [
+  "$timeout"
+  ($timeout) ->
+    (
+      restrict: "A"
+      link: ($scope, $element) ->
+        $timeout ->
+          $element[0].focus()
+    )
 ]
 
 
@@ -39,9 +50,9 @@ app.config ($routeProvider, $locationProvider) ->
   ).when("/sign_up",
     templateUrl: "/templates/user_registrations/new.html"
     controller: "UserRegistrationsCtrl"
-  ).when("/about",
-    templateUrl: "/templates/about.html"
-    controller: "AboutCtrl"
+  ).when("/home",
+    templateUrl: "/templates/home.html"
+    controller: "HomeCtrl"
     resolve:
       auth:[
         "$auth"
